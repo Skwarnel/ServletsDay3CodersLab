@@ -18,6 +18,7 @@ public class Cookie1Get extends HttpServlet {
             for (Cookie cookie : cookies) {
                 if (cookie.getName().equals("User")) {
                     resp.getWriter().println(cookie.getValue());
+                    resp.getWriter().println(cookie.getName());
                     resp.getWriter().println(cookie.getDomain());
                     resp.getWriter().println(cookie.getMaxAge());
                 }

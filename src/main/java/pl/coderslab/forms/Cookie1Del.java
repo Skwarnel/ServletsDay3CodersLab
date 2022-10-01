@@ -16,9 +16,10 @@ public class Cookie1Del extends HttpServlet {
         Cookie[] cookies = req.getCookies();
         boolean isUser = false;
 
-        if (Objects.nonNull(null)) {
+        if (Objects.nonNull(cookies)) {
             for (Cookie cookie : cookies) {
                 if (cookie.getName().equals("User")) {
+                    System.out.println("istnieje User");
                     isUser = true;
                     cookie.setMaxAge(0);
                     resp.addCookie(cookie);
